@@ -132,17 +132,10 @@ Implementation for Mesh and Submesh objects.
                                 modelIOMaterialSemantic:MDLMaterialSemanticSpecular
                                   metalKitTextureLoader:textureLoader];
         
-        if(@available(macOS 10.14, iOS 12.0, tvOS 12.0, *)) {
-            _textures[AAPLTextureIndexNormal] =
-                [AAPLSubmesh createMetalTextureFromMaterial:modelIOSubmesh.material
-                                    modelIOMaterialSemantic:MDLMaterialSemanticBump
-                                      metalKitTextureLoader:textureLoader];
-        } else {
-            _textures[AAPLTextureIndexNormal] =
-            [AAPLSubmesh createMetalTextureFromMaterial:modelIOSubmesh.material
-                                modelIOMaterialSemantic:MDLMaterialSemanticTangentSpaceNormal
-                                  metalKitTextureLoader:textureLoader];
-        }
+        _textures[AAPLTextureIndexNormal] =
+        [AAPLSubmesh createMetalTextureFromMaterial:modelIOSubmesh.material
+                            modelIOMaterialSemantic:MDLMaterialSemanticTangentSpaceNormal
+                              metalKitTextureLoader:textureLoader];
     }
 
     return self;
