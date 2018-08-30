@@ -1,0 +1,18 @@
+
+[Shark]
+# shaders
+water uv animation'
+
+# actions
+enemy rotation
+
+# scene reference
+general shaders & actions vs specific
+
+# particle effects
+water(splash, ripple, uv anim, smoke)
+fire
+
+# skybox
+
+# grass 
